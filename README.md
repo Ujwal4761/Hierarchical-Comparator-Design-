@@ -95,44 +95,6 @@ to observe the rising and falling edge.
 The worst-case vector was chosen as A=0x34, B=0x6C to observe both rising and falling edges across multiple bit positions, testing the ripple propagation through all FCC stages.
 Extracted view delays differ from schematic delays due to: (1) parasitic capacitances from metal interconnects which increase the load on each gate output, and (2) parasitic resistance in metal wires creating additional RC delay not modeled in schematic simulation
 
-delay	Out<1>	Out<2>		
-HCC_D1	64.32ps	67.37ps		
-FCC_D1	107.757ps	110.79ps		
-				
-				
-Delay	Out<1>	Out<2>		
-HCC_D2	58.8526ps	57.058ps		
-FCC_D2	96.29ps	106.692ps		
-				
-	Out<1>	Out<2>		
-HCC_D3	51.10ps	51.04ps		
-FCC_D3	98ps	97.966ps		
-				
-				
-design	HCC worst (ps)		FCC worse (ps)	
-1	67.37		110.79	
-2	58.85		106.692	
-3	51.1		97.966	
-				
-design 3 has the lowest worst case delay in both HCC and FCC				
-				
-8-bit comparator				
-design 1 =	FCC_D3 +	FCC_D3 +	FCC_D3 +	FCC_D3 +
-				
-delay estimation for design 1				
-delay =	(FCC_D3  x  7) + (HCC_D3  x  1)			
-delay=	736.862	ps		
-				
-8-bit comparator				
-design 2 =	FCC_D2 +	FCC_D2 +	FCC_D2 +	FCC_D2 +
-				
-delay estimation for design 2				
-delay=	(FCC_D2  x 7) + (HCC_D3  x  1)			
-delay=	797.944	ps		
-				
-				
-		delay found		
-8bit_comparator_D1		400.889ps		
-8bit_comparator_D2		400.896ps		
+
 <img width="681" height="1483" alt="image" src="https://github.com/user-attachments/assets/9eb82574-aa90-4157-970a-277eee70d1e9" />
 
