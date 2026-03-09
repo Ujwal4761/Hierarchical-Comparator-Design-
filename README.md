@@ -1,6 +1,35 @@
 DESIGN OPTIMIZATION FOR STRUCTURED CIRCUITS: COMPARATOR
 
 The truth table has been made available in the excel file
+HCC							00 = Equal to	
+Inputs		Outputs					01 = B is greater than A	
+A	B	Oi,1	Oi,2				10= A is greater than B	
+0	0	0	0			XX=	11 =  considering it as invalid	
+0	1	0	1					
+1	0	1	0					
+1	1	0	0					
+								
+FCC								
+	inputs		previous outputs		Outputs			
+no.	A	B	P1	P2	Oi,1	Oi,2		
+0	0	0	0	0	0	0		
+1	0	0	0	1	0	1		
+2	0	0	1	0	1	0		
+3	0	0	1	1	X	X		
+4	0	1	0	0	0	1		
+5	0	1	0	1	0	1		
+6	0	1	1	0	0	1		
+7	0	1	1	1	0	1		
+8	1	0	0	0	1	0		
+9	1	0	0	1	1	0		
+10	1	0	1	0	1	0		
+11	1	0	1	1	1	0		
+12	1	1	0	0	0	0		
+13	1	1	0	1	0	1		
+14	1	1	1	0	1	0		
+15	1	1	1	1	X	X		
+<img width="1225" height="1047" alt="image" src="https://github.com/user-attachments/assets/f44d15f6-bf1e-4474-a8ca-cdafd9c0319f" />
+
 
 The comparator has two main components:
 full-comparator cells (FCC) 
